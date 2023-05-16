@@ -1,0 +1,92 @@
+@font-face {
+    font-family: 'PressStart2P-Regular';
+    src: url('../Fonts/PressStart2P-Regular.ttf') format('truetype');
+}
+
+.container{
+    background-image: url("./Fondo23.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-color: rgba(0, 0, 0, 0.4); 0.5 representa una transparencia del 50% */
+    /* background-blend-mode: multiply; */
+    height: 100vh;
+}
+
+.subContainer{
+    display: flex;
+    margin-top: 16%;
+    align-items: center; 
+    justify-content: center
+}
+
+.navlink{
+    text-decoration: none;
+    background-color: #000056;
+    color: #FF5C81;
+    padding: 10px 25px;
+    border-top: 3px solid  #FF5C81;
+    border-right: 4px solid  #FF5C81;
+    border-bottom: 8px solid #FF5C81;
+    border-left: 4px solid #FF5C81;;
+    font-weight: 700;
+    font-family: 'PressStart2P-Regular', sans-serif;
+    font-size: 30px;
+}
+
+.space {
+    display: flex;
+    justify-content: center;
+}
+
+.textTitle {
+    color:#FF5C81;
+    font-size: 30px;
+    font-family: 'PressStart2P-Regular', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.textSubtitle {
+    color:#FF5C81;
+    font-size: 18px;
+    font-family: 'PressStart2P-Regular', sans-serif;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: blink-animation 1s steps(5, start) infinite;
+    -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+    to {
+    visibility: hidden;
+    }
+}
+@-webkit-keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+
+@keyframes blink {
+    0%, 50%, 100% {
+    opacity: 1;
+    }
+   25%, 70% {
+    opacity: .2;
+    }
+   }
+   .blink {
+    -webkit-animation-name: flash;
+    animation-name: flash;
+   }
+
+.navlink:hover {
+    animation: blink 1s infinite;
+}
