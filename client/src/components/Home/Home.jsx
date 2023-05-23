@@ -2,12 +2,7 @@ import React, { useState, useEffect } from "react";
 import styles from "./Home.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
-import {
-  getAllVideogames,
-  getVideogameByName,
-  getGenres,
-  Filter,
-} from "../../redux/actions.js";
+import { getAllVideogames, getVideogameByName, getGenres, Filter, } from "../../redux/actions.js";
 import Card from "../Card/Card.jsx";
 import { Loading } from "../Loading/Loading.jsx";
 
@@ -58,9 +53,9 @@ const HomePage = () => {
   const renderNavigationButtons = () => {
     return (
       <div className={styles.pagContainer}>
-        <button className={styles.pagBtns} onClick={() => handlePageChange(-1)}>◀</button>
+        <button title="Previous" className={styles.pagBtns} onClick={() => handlePageChange(-1)}>◀</button>
         {renderPageNumbers()}
-        <button className={styles.pagBtns} onClick={() => handlePageChange(1)}>▶</button>
+        <button title="Next" className={styles.pagBtns} onClick={() => handlePageChange(1)}>▶</button>
       </div>
     );
   };
@@ -167,7 +162,6 @@ const HomePage = () => {
   return (
     <div className={styles.container}>
       <div className={styles.space}>
-        
         <section>
           <div className={styles.containerhome}>
             <div className={styles.nav}>
@@ -177,7 +171,7 @@ const HomePage = () => {
                     </NavLink>
                     <div className={styles.searchBar}>
                         <NavLink to={"/create"}>
-                        <button className={styles.newVideogame}>+</button>
+                        <button title="Create new videogame" className={styles.newVideogame}>+</button>
                         </NavLink>
                         <input
                         type="text"
@@ -185,7 +179,7 @@ const HomePage = () => {
                         placeholder="Search Videogames..."
                         onChange={inputHandler}
                         />
-                        <button className={styles.searchButton} onClick={handleSearch}>
+                        <button title="Search videogame" className={styles.searchButton} onClick={handleSearch}>
                           SEARCH
                         </button>
                     </div>
@@ -242,7 +236,6 @@ const HomePage = () => {
             <div>{renderNavigationButtons()}</div>
           </div>
         </section>
-        
       </div>
     </div>
   );

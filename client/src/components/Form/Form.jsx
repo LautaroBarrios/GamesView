@@ -2,25 +2,16 @@ import React from "react";
 import styles from "./Form.module.css";
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import {
-    getAllVideogames,
-    getGenres,
-    postVideogames,
-} from "../../redux/actions.js";
+import { getAllVideogames, getGenres, postVideogames, } from "../../redux/actions.js";
 import { NavLink } from "react-router-dom";
-import { validate } from "./validate";
 import { Loading } from "../Loading/Loading.jsx";
+import { validate } from "./validate";
 
 const FormPage = () => {
     const dispatch = useDispatch();
     const platforms = useSelector((state) =>
         state.allVideogames
-        .map((game) =>
-            Array.isArray(game.platforms)
-            ? game.platforms?.map((p) => p?.platform?.name)
-            : []
-        )
-        ?.flat()
+        .map((game) => Array.isArray(game.platforms) ? game.platforms?.map((p) => p?.platform?.name): [] ) ?.flat()
     );
     const [create, setCreate] = useState(false);
     let uniquePlatforms = [...new Set(platforms)];
@@ -282,7 +273,6 @@ const FormPage = () => {
                                 className={styles.description}
                                 placeholder="Description of the videogame"
                                 name="description"
-                                rows="5"
                                 value={inputs.description}
                                 onChange={handleInputChange}
                             ></textarea><br/>

@@ -15,28 +15,7 @@
     border-color: #FF5C81;
 }
 
-.image{
-    margin-top: 15px;
-    border: double;
-    border-color: #FF5C81;
-    width:230px;
-    height:150
-}
-
-.card:hover .cardGenres {
-    opacity: 1;
-    transform: translateY(0%);
-}
-
-.card:hover .videogameName{
-    color:#fa2859;
-}
-
-.card:active .videogameName {
-    color: #FF5C81;
-}
-
-.card .cardGenres {
+.cardGenres {
     position: absolute;
     top: 0;
     left: 0;
@@ -61,7 +40,15 @@
     margin: 5px;
 }
 
-.card .videogameName {
+.image{
+    margin-top: 15px;
+    border: double;
+    border-color: #FF5C81;
+    width:230px;
+    height:150
+}
+
+.videogameName {
     margin: 2%;
     font-weight: 300;
     font-size: 14px;
@@ -70,4 +57,17 @@
     transition: 0.4s;
     transition: transform 0.4s;
     overflow: hidden;
+}
+
+.card:hover .cardGenres {
+    opacity: 1;
+    transform: translateY(0%);
+}
+
+.card:hover .videogameName{
+    color:#fa2859;
+}
+
+.card:active .videogameName {
+    color: #FF5C81;
 }

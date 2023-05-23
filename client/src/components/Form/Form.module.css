@@ -50,7 +50,6 @@ section .box {
 section .container {
     position: relative;
     width: 850px;
-    /* height: 700px; */
     background-color: rgba(0, 0, 0, 0.1);
     border: 3px solid #FF5C81;
     display: flex;
@@ -185,12 +184,14 @@ section .container {
     margin-top: 10px;
 }
 
+
+/*                                          ANIMACIONES                                           */
+
 .nameX:hover {
     animation: blink 1s infinite;
     color: #ff1f1f;
+    text-decoration-line: underline overline;
 }
-
-/*                                          ANIMACIONES                                           */
 
 .formSelect:hover {
     animation: blink 1s infinite;

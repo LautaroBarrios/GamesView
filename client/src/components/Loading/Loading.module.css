@@ -3,7 +3,7 @@
   src: url('../Fonts/PressStart2P-Regular.ttf') format('truetype');
 }
 
-body{ 
+body { 
   font-family: 'PressStart2P-Regular', sans-serif;
   font-weight: 900;
   background-image: url("../BackgroundImage/Home.gif");
@@ -13,12 +13,14 @@ body{
   background-blend-mode: multiply;
   height: 100vh;
 }
-.container{ 
+
+.container { 
   display: grid;
   place-content: center;
   height: 100vh;
 }
-.loading{ 
+
+.loading { 
   position: relative; 
   color: #FF5C81;
   margin-top: 2em;
@@ -26,7 +28,7 @@ body{
   text-transform: uppercase
 }
 
-.containerLoader{  
+.containerLoader {  
   width: 180px;
   height: 30px;
   display: flex;
@@ -35,20 +37,21 @@ body{
   justify-content: space-between;
   margin: 0 auto; 
 }
-.containerLoader div{ 
+
+.containerLoader div { 
   width: 30px;
   height: 30px;
   background-color: #FF5C81;
   animation: salto 1s alternate
   infinite;
 }
-.containerLoader div:nth-child(2){ 
+.containerLoader div:nth-child(2) { 
   animation-delay: 0.20s; 
 }
-.containerLoader div:nth-child(3){ 
+.containerLoader div:nth-child(3) { 
   animation-delay: 0.40s; 
 }
-.containerLoader div:nth-child(4){ 
+.containerLoader div:nth-child(4) { 
   animation-delay: 0.60s; 
 }
 

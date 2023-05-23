@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { getVideogameDetails } from "../../redux/actions.js";
 import { NavLink } from "react-router-dom";
+
 import styles from "./Detail.module.css";
 import { Loading } from "../Loading/Loading.jsx";
 
@@ -26,7 +27,7 @@ const DetailPage = () => {
     const gameGenres = detail.genres?.map((genre) => genre.name);
     
     return (
-        <>
+        <div>
             {loading ? <Loading /> : 
                 <div className={styles.container}>
                     <div className={styles.infoSup}>
@@ -66,7 +67,7 @@ const DetailPage = () => {
                     </div>
                 </div>
             }
-        </>
+        </div>
     );
 };
 
