@@ -1,0 +1,62 @@
+@font-face {
+  font-family: 'PressStart2P-Regular';
+  src: url('../Fonts/PressStart2P-Regular.ttf') format('truetype');
+}
+
+body{ 
+  font-family: 'PressStart2P-Regular', sans-serif;
+  font-weight: 900;
+  background-image: url("../BackgroundImage/Home.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.7);
+  background-blend-mode: multiply;
+  height: 100vh;
+}
+.container{ 
+  display: grid;
+  place-content: center;
+  height: 100vh;
+}
+.loading{ 
+  position: relative; 
+  color: #FF5C81;
+  margin-top: 2em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase
+}
+
+.containerLoader{  
+  width: 180px;
+  height: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin: 0 auto; 
+}
+.containerLoader div{ 
+  width: 30px;
+  height: 30px;
+  background-color: #FF5C81;
+  animation: salto 1s alternate
+  infinite;
+}
+.containerLoader div:nth-child(2){ 
+  animation-delay: 0.20s; 
+}
+.containerLoader div:nth-child(3){ 
+  animation-delay: 0.40s; 
+}
+.containerLoader div:nth-child(4){ 
+  animation-delay: 0.60s; 
+}
+
+@keyframes salto {
+  from {
+    opacity: 1;
+  }
+  to{
+    opacity: .2;
+  }
+}

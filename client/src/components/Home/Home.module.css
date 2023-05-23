@@ -1,0 +1,223 @@
+@font-face {
+    font-family: 'PressStart2P-Regular';
+    src: url('../Fonts/PressStart2P-Regular.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+}
+
+a:link, a:visited, a:active {
+    text-decoration: none;
+}
+
+.container {
+    background-image: url("../BackgroundImage/Home.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: multiply;
+    height: 100vh;
+    border: solid #FF5C81;
+}
+
+.textTitle {
+    text-decoration: none;
+    color: #FF5C81;
+    font-size: 30px;
+    font-family: 'PressStart2P-Regular', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+    animation: blink-animation 1.5s steps(5, start) infinite;
+    -webkit-animation: blink-animation 1.5s steps(5, start) infinite;
+}
+
+.containerCards .genreCard {
+    animation: blink-animation 1.5s steps(5, start) infinite;
+    -webkit-animation: blink-animation 1.5s steps(5, start) infinite;
+}
+
+.containerCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerhome {
+    position: relative;
+    min-height: 640px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 50px 0px 50px;
+    transition: 0.4s;
+}
+
+.newVideogame {
+    border: solid #FF5C81;
+    width: 32px;
+    height: 32px;
+    font-size: 11px;
+    text-align: center;
+    color: #FF5C81;
+    background-color: #000056;
+    font-family: 'PressStart2P-Regular', sans-serif;
+    margin-top: 5%;
+}
+
+.newVideogame:hover {
+    animation: blink 1s infinite;
+}
+
+.searchBar input {
+    border: solid #FF5C81;
+    width: 250px;
+    height: 32px;
+    font-size: 11px;
+    text-align: center;
+    color: #FF5C81;
+    background-color: #000056;
+    font-family: 'PressStart2P-Regular', sans-serif;
+    margin-top: 5%;
+}
+
+.searchBar input:hover {
+    animation: blink 1s infinite;
+}
+
+::placeholder {
+    color: #FF5C81;
+    opacity: .6;
+}
+
+.searchButton {
+    border: solid #FF5C81;
+    width: 82px;
+    height: 32px;
+    font-size: 11px;
+    text-align: center;
+    color: #FF5C81;
+    background-color: #000056;
+    font-family: 'PressStart2P-Regular', sans-serif;
+    margin-top: 5%;
+}
+
+.searchButton:hover {
+    animation: blink 1s infinite;
+}
+
+.recharge {
+    border: solid #FF5C81;
+    width: 185px;
+    height: 32px;
+    font-size: 9px;
+    text-align: center;
+    color: #FF5C81;
+    background-color: #000056;
+    font-family: 'PressStart2P-Regular', sans-serif;
+    margin-top: 4%;
+}
+
+.recharge:hover {
+    animation: blink 1s infinite;
+}
+
+.filterBtns select {
+    border: solid #FF5C81;
+    width: 185px;
+    height: 32px;
+    font-size: 9px;
+    text-align: center;
+    color: #FF5C81;
+    background-color: #000056;
+    font-family: 'PressStart2P-Regular', sans-serif;
+    margin-top: 4%;
+}
+
+.filterBtns select:hover {
+    animation: blink 1s infinite;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+}
+
+.pagContainer {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: var(--tertiary);
+    width: 850px;  
+    height: 30px;
+    text-align: center;
+    font-family: 'PressStart2P-Regular', sans-serif;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagBtns {
+    margin: 2px;
+    border: solid #FF5C81;
+    width: 32px;
+    height: 32px;
+    font-size: 9px;
+    text-align: center;
+    color: #FF5C81;
+    background-color: #000056;
+    font-family: 'PressStart2P-Regular', sans-serif;
+}
+
+.pagBtns:hover {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+
+@-webkit-keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+
+@keyframes blink {
+    0%, 50%, 100% {
+        opacity: 1;
+    }
+    25%, 70% {
+        opacity: .2;
+    }
+}
+
+.blink {
+    -webkit-animation-name: flash;
+    animation-name: flash;
+}

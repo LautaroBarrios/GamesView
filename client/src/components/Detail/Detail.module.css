@@ -1,0 +1,90 @@
+@font-face {
+    font-family: 'PressStart2P-Regular';
+    src: url('../Fonts/PressStart2P-Regular.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+}
+
+.container {
+    background-image: url("../BackgroundImage/Home.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.7);
+    background-blend-mode: multiply;
+    height: 100vh;
+    border: 10px solid #FF5C81;
+}
+
+.container img {
+    margin-top: 18px;
+    border: double;
+    border-color: #FF5C81;
+    width:230px;
+    height:150
+}
+
+.infoSup {
+    display: flex;
+    color: #FF5C81;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 1%;
+    font-size: 14px;
+}
+
+.back {
+    border: solid #FF5C81;
+    width: 82px;
+    height: 32px;
+    font-size: 11px;
+    text-align: center;
+    color: #FF5C81;
+    background-color: #000056;
+    font-family: 'PressStart2P-Regular', sans-serif;
+    margin-top: 1%;
+    animation: blink-animation 1.2s steps(5, start) infinite;
+    -webkit-animation: blink-animation 1.2s steps(5, start) infinite;
+}
+
+.description {
+    margin-top: 2%;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: #FF5C81;
+    font-size: 14px;
+}
+.margin {
+    margin-bottom: 5%;
+}
+
+.marginDescription {
+    margin-bottom: 10px;
+}
+
+@keyframes blink-animation {
+    to {
+    visibility: hidden;
+    }
+}
+@-webkit-keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+
+@keyframes blink {
+    0%, 50%, 100% {
+        opacity: 1;
+    }
+    25%, 70% {
+        opacity: .2;
+    }
+}
