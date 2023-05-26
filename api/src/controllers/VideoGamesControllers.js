@@ -121,7 +121,7 @@ const getGameDetail = async (idVideogame) => {
       description: apiGame.data.description,
       platforms: apiGame.data.platforms,
       background_image: apiGame.data.background_image,
-      launched: apiGame.data.launched,
+      launched: apiGame.data.released_at,
       rating: apiGame.data.rating,
       genres: apiGame.data.genres,
       };
