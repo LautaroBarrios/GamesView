@@ -7,11 +7,11 @@ router.get("/videogames", async (req, res) => {
     const { name } = req.query;
     try {
         if (!name) {
-        const response = await getVideogames();
-        return res.status(200).json(response);
+            const response = await getVideogames();
+            return res.status(200).json(response);
         } else {
-        const response = await getGameByName(name);
-        return res.status(200).json(response);
+            const response = await getGameByName(name);
+            return res.status(200).json(response);
         }
     } catch (error) {
         return res.status(400).json({ error: error.message });
@@ -40,13 +40,13 @@ router.post("/videogames", async (req, res) => {
     } = req.body;
     try {
         const newGame = await createVideogame(
-        name,
-        description,
-        platforms,
-        background_image,
-        launched,
-        rating,
-        genres
+            name,
+            description,
+            platforms,
+            background_image,
+            launched,
+            rating,
+            genres
         );
         res.status(200).json(newGame);
     } catch (error) {

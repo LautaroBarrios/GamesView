@@ -23,7 +23,7 @@ const getAllGenres = async () => {
     if (genresDb.length) {
         return genresDb;
     } else {
-        throw new Error("Lamentablemente, no se encuentran géneros en la base de datos.");
+        throw new Error("Unfortunately, no genera are found in the database.");
     }
 };
 

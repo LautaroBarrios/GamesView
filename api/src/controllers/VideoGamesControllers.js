@@ -50,7 +50,7 @@ const getVideogames = async () => {
     };
   });
   
-  if (!formatGames) throw new Error("Lamentablemente, no se encuentraron datos.");
+  if (!formatGames) throw new Error("Unfortunately, no data were found.");
 
   return formatGames;
 };
@@ -72,7 +72,7 @@ const createVideogame = async (
     !launched ||
     !rating ||
     !genres
-  ) throw Error("Faltan campos para crear el juego.");
+  ) throw Error("Fields are missing to create the videogame.");
 
   const newGame = await Videogame.create({
     name,
@@ -109,7 +109,7 @@ const getGameDetail = async (idVideogame) => {
       genres: dbGame.genres,
     };
     } else {
-      throw new Error("No se encontró el juego.");
+      throw new Error("The videogame was not found.");
     }
   } catch (error) {
     const url = `https://api.rawg.io/api/games/${idVideogame}?key=${API_KEY}`;
@@ -126,7 +126,7 @@ const getGameDetail = async (idVideogame) => {
       genres: apiGame.data.genres,
       };
     } else {
-      throw new Error("No se encontró el juego.");
+      throw new Error("The videogame was not found.");
     }
   }
 };
@@ -180,7 +180,7 @@ const getGameByName = async (name) => {
   } else if (games.length > 0 && results.length === 0) {
     return games;
   } else {
-    throw new Error("No se encontró el juego.");
+    throw new Error("The videogame was not found.");
   }
 };
 

@@ -21,7 +21,7 @@ const HomePage = () => {
   const [name, setName] = useState("");
   const [loading, setLoading] = useState(true);
 
-  const gamesPerPage = 10;
+  const gamesPerPage = 15;
   const videogamesDisplayLength = videogamesDisplay ? videogamesDisplay.length : 0;
   const pagesCount = Math.ceil(videogamesDisplayLength / gamesPerPage);
 

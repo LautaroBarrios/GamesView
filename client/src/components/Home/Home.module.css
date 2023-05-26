@@ -23,7 +23,7 @@ a:link, a:visited, a:active {
     background-size: cover;
     background-color: rgba(0, 0, 0, 0.6);
     background-blend-mode: multiply;
-    height: 100vh;
+    height: auto;
     border: solid #FF5C81;
 }
 
