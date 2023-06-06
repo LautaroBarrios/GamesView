@@ -34,7 +34,7 @@ router.post("/videogames", async (req, res) => {
         description,
         platforms,
         background_image,
-        launched,
+        released,
         rating,
         genres,
     } = req.body;
@@ -44,7 +44,7 @@ router.post("/videogames", async (req, res) => {
             description,
             platforms,
             background_image,
-            launched,
+            released,
             rating,
             genres
         );

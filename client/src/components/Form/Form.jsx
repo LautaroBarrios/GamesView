@@ -22,7 +22,7 @@ const FormPage = () => {
         name: "",
         platforms: [],
         description: "",
-        launched: "",
+        released: "",
         rating: 0,
         image: "",
         genres: [],
@@ -45,7 +45,7 @@ const FormPage = () => {
             inputs.name !== "" &&
             inputs.platforms.length > 0 &&
             inputs.description !== "" &&
-            inputs.launched !== "" &&
+            inputs.released !== "" &&
             inputs.rating !== 0 &&
             inputs.image !== "" &&
             inputs.genres.length > 0
@@ -70,7 +70,7 @@ const FormPage = () => {
             description: inputs.description,
             platforms: formatPlatforms,
             background_image: inputs.image,
-            launched: inputs.launched,
+            released: inputs.released,
             rating: Number(inputs.rating),
             genres: formatGenres,
             };
@@ -79,7 +79,7 @@ const FormPage = () => {
             name: "",
             platforms: [],
             description: "",
-            launched: "",
+            released: "",
             rating: 0,
             image: "",
             genres: [],
@@ -256,16 +256,16 @@ const FormPage = () => {
                             <input
                                 className={styles.title}
                                 type="date"
-                                name="launched"
+                                name="released"
                                 placeholder="date"
-                                value={inputs.launched}
+                                value={inputs.released}
                                 onChange={handleInputChange}
                             /><br/>
                             <label
-                                htmlFor="launched"
+                                htmlFor="released"
                                 className={styles.error}
                             >
-                                {errors.launched && `${errors.launched}`}
+                                {errors.released && `${errors.released}`}
                             </label>
                         </div>
                         <div>

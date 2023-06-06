@@ -13,13 +13,13 @@ export function validate(inputs) {
   if (inputs.image.length > 0 && !onlyUrl.test(inputs.image))
     error.image = "The URL of this image is not recognized";
 
-  if (inputs.image.length > 300) error.image = "URL exceeds max 300 characters";
+  if (inputs.image.length > 500) error.image = "URL exceeds max 500 characters";
 
   if (inputs.description.length > 550)
     error.description = "Description exceeds the 550 character limit";
 
-  if (inputs.launched !== "" && !dateRegex.test(inputs.launched))
-    error.launched = "Invalid date format. Expected format: DD-MM-YYYY";
+  if (inputs.released !== "" && !dateRegex.test(inputs.released))
+    error.released = "Invalid date format. Expected format: DD-MM-YYYY";
 
   return error;
 }

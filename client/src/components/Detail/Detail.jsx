@@ -53,7 +53,7 @@ const DetailPage = () => {
                         </div>
                         <div>
                             <h4 className={styles.margin}>LAUNCH</h4>
-                            <h4>{detail.launched}</h4>
+                            <h4>{detail.released}</h4>
                         </div>
                     </div>
                     <div className={styles.description}>

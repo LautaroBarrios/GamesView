@@ -60,7 +60,7 @@ const createVideogame = async (
     description,
     platforms,
     background_image,
-    launched,
+    released,
     rating,
     genres
   ) => {
@@ -69,7 +69,7 @@ const createVideogame = async (
     !description ||
     !platforms ||
     !background_image ||
-    !launched ||
+    !released ||
     !rating ||
     !genres
   ) throw Error("Fields are missing to create the videogame.");
@@ -79,7 +79,7 @@ const createVideogame = async (
     description,
     platforms,
     background_image,
-    launched,
+    released,
     rating,
   });
   await newGame.addGenre(genres);
@@ -104,7 +104,7 @@ const getGameDetail = async (idVideogame) => {
       description: dbGame.description,
       platforms: dbGame.platforms,
       background_image: dbGame.background_image,
-      launched: dbGame.launched,
+      released: dbGame.released,
       rating: dbGame.rating,
       genres: dbGame.genres,
     };
@@ -114,6 +114,7 @@ const getGameDetail = async (idVideogame) => {
   } catch (error) {
     const url = `https://api.rawg.io/api/games/${idVideogame}?key=${API_KEY}`;
     const apiGame = await axios(url);
+    console.log(apiGame);
     if (Object.keys(apiGame.data).length !== 0) {
       return {
       id: apiGame.data.id,
@@ -121,7 +122,7 @@ const getGameDetail = async (idVideogame) => {
       description: apiGame.data.description,
       platforms: apiGame.data.platforms,
       background_image: apiGame.data.background_image,
-      launched: apiGame.data.released_at,
+      released: apiGame.data.released,
       rating: apiGame.data.rating,
       genres: apiGame.data.genres,
       };
